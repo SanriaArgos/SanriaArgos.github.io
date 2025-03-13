@@ -1,137 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Resume</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            overflow-y: scroll;
-            position: relative;
-        }
-        .header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
-        .header img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 5px solid #00A550;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
-        }
-        .header h1 {
-            color: #fff;
-            text-align: center;
-            margin-top: 0;
-        }
-        .section {
-            background-color: #333;
-            color: #fff;
-            margin: 20px;
-            padding: 20px;
-            border: 5px solid #00A550;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
-            max-width: 800px;
-        }
-        .section:hover {
-            transform: scale(1.1);
-        }
-        .section h2 {
-            margin-top: 0;
-        }
-        .section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .section li {
-            margin-bottom: 10px;
-        }
-        .contact {
-            text-align: center;
-        }
-        .code-strip-left {
-            position: absolute;
-            top: 0;
-            left: 10px;
-            width: 20px;
-            height: 100vh;
-            background-color:  #00A550;
-            animation: code-strip-animation 10s linear infinite;
-        }
-        .code-strip-right {
-            position: absolute;
-            top: 0;
-            right: 10px;
-            width: 20px;
-            height: 100vh;
-            background-color:  #00A550;
-            animation: code-strip-animation 10s linear infinite;
-            animation-delay: 2s;
-        }
-        @keyframes code-strip-animation {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-100%);
-            }
-        }
-        @media (max-width: 768px) {
-            .section {
-                max-width: 90%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Резюме Толстограевой Виктории</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="code-strip-left"></div>
-    <div class="code-strip-right"></div>
-    <div class="header">
-        <img src="profile_foto.jpg" alt="Фото">
-        <h1>Viktoria Tolstograeva</h1>
-    </div>
-    <div class="section">
-        <h2>Personal information</h2>
-        <p>Place of study: Higher School of Economics, St. Petersburg Branch</p>
-        <p>Direction: Applied Mathematics and Computer Science, 1st year</p>
-    </div>
-    <div class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>• Programming in C++, Python, SQL, HTML, RenPy</li>
-            <li>• Application testing</li>
-            <li>• Video game development</li>
-            <li>• Website layout</li>
-            <li>• Writing articles and maintaining social networks on the track of IT and inclusion</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Work experience</h2>
-        <ul>
-            <li>✔ Development of visual novels <a href="https://vk.com/wall230441658_5492" style="color: #00A550;">"The Rise of Bots"</a> и <a href="https://vk.com/wall230441658_4590" style="color: #00A550;">"The Walpurgis Spirit"</a> in RenPy</li>
-            <li>✔ Testing of video games (2022) and web versions of applications (2023)</li>
-            <li>✔ Designing a smart dish for balanced nutrition (2023)</li>
-            <li>✔ Designing the application "Accessible City: Routes for people with disabilities" (2024)</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Contact information</h2>
-        <ul>
-            <li>VK: <a href="https://vk.com/gray_strong_mousy" style="color: #00A550;">@gray_strong_mousy</a></li>
-        </ul>
-    </div>
+
+  <header id="profile">
+    <img src="photo.jpg" alt="Виктория Толстограева" class="profile-photo">
+    <h1>Толстограева Виктория</h1>
+  </header>
+
+  <nav id="menu">
+    <ul>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#goals">Цели в работе</a></li>
+      <li><a href="#education">Образование</a></li>
+      <li><a href="#experience">Мой опыт</a></li>
+      <li><a href="#skills">Мои навыки</a></li>
+      <li><a href="#additional">Дополнительная информация</a></li>
+      <li><a href="#contacts">Обратная связь</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <section id="about" class="frame hidden">
+      <h2>Общаяя информация</h2>
+      <p>Город: Санкт-Петербург</p>
+      <p>Email: <a href="mailto:vstolstograeva@edu.hse.ru">vstolstograeva@edu.hse.ru</a></p>
+      <p>GitHub: <a href="https://github.com/SanriaArgos" target="_blank">@SanriaArgos</a></p>
+    </section>
+
+    <section id="goals" class="frame hidden">
+      <h2>Цели в работе</h2>
+      <p>
+        Я стремлюсь помогать людям упрощать свою жизнь с помощью информационных технологий: анализировать проблемы и искать пути их решения, совершенствовать продукт таким образом, чтобы он был доступен и удобен для любого пользователя. Одна из моих целей — начать работать в сфере цифровой инклюзии.
+      </p>
+      <p>
+        Я всегда готова к освоению новой информации. Если сталкиваюсь с трудной задачей, разбираюсь с ней до конца, поскольку осознаю свою ответственность. Быстро нахожу общий язык с коллегами и умею работать в команде.
+      </p>
+    </section>
+
+    <section id="education" class="frame hidden">
+      <h2>Образование</h2>
+      <h3>Вуз: Высшая школа экономики, Санкт-Петербург</h3>
+      <p>Факультет: школа информатики, физики и технологий</p>
+      <p>Направление: прикладная математика и информатика</p>
+      <p>Год обучения: 1</p>
+      <h3>Курсы:</h3>
+      <ul>
+        <li>2024: сборы «МАРС-ИТ» от НПО «Марс», посвященные командообразованию в IT.</li>
+        <li>2023: «<a href="https://vk.com/itdivingvk" target="_blank">IT-дайвинг</a>» от VK по направлению «Ручное тестирование веб-сайтов».</li>
+        <li>2022-2023: <a href="https://derprobelo.ru/" target="_blank">курсы по разработке визуальных новелл</a>.</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="frame hidden">
+      <h2>Мой опыт</h2>
+      <h3>Опыт работы:</h3>
+      <ul>
+        <li>2022-2023: тестировала видеоигры на курсе «Новелльный движ» и сайты «Газпром-медиа» на курсе «IT-Дайвинг» от VK.</li>
+        <li>2021-2024: работала младшим, а с 2023 года старшим помощником куратора писательского онлайн-клуба «Шторм». Занималась управлением командой и координацией работы чата на мероприятиях.</li>
+      </ul>
+      <h3>Проекты:</h3>
+      <ul>
+        <li>
+          2025: <a href="https://github.com/SanriaArgos/MedScheduler" target="_blank">MedScheduler</a> — сервис по поиску врачей и записи на прием. Отвечаю за работу с базами данных.
+        </li>
+        <li>
+          2023: визуальная новелла «<a href="https://vk.com/wall230441658_5492" target="_blank">R.O.B: Восстание ботов</a>».
+        </li>
+        <li>
+          2023: проектирование умной тарелки для сбалансированного питания. Занималась анализом конкурентов, координацией работы в команде и презентацией тестового продукта.
+        </li>
+        <li>
+          2022: визуальная новелла «<a href="https://vk.com/wall230441658_4590" target="_blank">Вальпургиев дух</a>».
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills" class="frame hidden">
+      <h2>Мои навыки</h2>
+      <h3>Языки программирования:</h3>
+      <p>Python, C++</p>
+      <h3>Технологии и инструменты:</h3>
+      <p>Django, SQL, RenPy</p>
+      <h3>Soft skills:</h3>
+      <ul>
+        <li>Аналитические способности;</li>
+        <li>Генерация идей для решения проблем;</li>
+        <li>Умение ориентироваться в большом объёме информации;</li>
+        <li>Адаптивность;</li>
+        <li>Коммуникация и командная работа;</li>
+        <li>Умение переключаться между задачами;</li>
+        <li>Упорство, пунктуальность, исполнительность.</li>
+      </ul>
+    </section>
+
+    <section id="additional" class="frame hidden">
+      <h2>Дополнительная информация</h2>
+      <p>Знание языков: русский, английский</p>
+      <p>Увлечения: разработка видеоигр, работа в Photoshop</p>
+    </section>
+
+    <section id="contacts" footer class="frame hidden">
+      <h2>Обратная связь:</h2>
+        <p>Telegram: <a href="https://t.me/titmousy" target="_blank">@titmousy</a></p>
+        <p>VK: <a href="https://vk.com/gray_strong_mousy" target="_blank">@gray_strong_mousy</a></p>
+      </p>
+    </footer>
+  </div>
+
+  <div class="side-triangles left"></div>
+  <div class="side-triangles right"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
