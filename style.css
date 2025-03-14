@@ -1,9 +1,8 @@
 :root {
-  --main-green: #8FBC8F;       /* спокойный зеленый */
-  --main-green-hover: #98d7a5; /* немного светлее при наведении */
+  --main-green: #8FBC8F;     
+  --main-green-hover: #98d7a5; 
 }
 
-/* Общий стиль: черный фон и белый текст */
 body {
   font-family: 'cursive', sans-serif;
   line-height: 1.6;
@@ -13,11 +12,10 @@ body {
   color: #CADABA;
 }
 
-/* Верхний профиль */
 #profile {
   text-align: center;
   padding: 0rem 0;
-  margin-top: 90px; /* отступ, чтобы меню не перекрывало */
+  margin-top: 90px; 
 }
 .profile-photo {
   width: 300px;
@@ -28,7 +26,6 @@ body {
   margin-bottom: 0rem;
 }
 
-/* Фиксированное меню */
 #menu {
   position: fixed;
   top: 0;
@@ -57,13 +54,11 @@ body {
   color: var(--main-green-hover);
 }
 
-/* Основной контент */
 #content {
   margin-top: 20px;
   padding-bottom: 0rem;
 }
 
-/* Рамки для секций */
 .frame {
     border: 2px solid var(--main-green);
     border-radius: 10px;
@@ -72,21 +67,19 @@ body {
     margin: 2rem auto;
     transition: transform 0.3s ease;
     position: relative;
-    z-index: 2; /* рамки всегда поверх фоновых анимаций */
-    background-color: #000; /* черный фон внутри рамок */
+    z-index: 2; 
+    background-color: #000; 
   }
   
 .frame:hover {
   transform: scale(1.05);
 }
 
-/* Заголовки секций по центру вверху рамки */
 .frame h2 {
   text-align: center;
   margin-top: 0;
 }
 
-/* Анимация появления элементов при прокрутке */
 .hidden {
   opacity: 0;
   transform: translateY(20px);
@@ -97,7 +90,6 @@ body {
   transform: translateY(0);
 }
 
-/* Стилизация заголовков и ссылок внутри секций */
 h1, h2, h3 {
   color: var(--main-green);
 }
@@ -110,28 +102,26 @@ a:hover {
   color: var(--main-green-hover);
 }
 
-/* Контейнеры для падающих треугольников */
 .side-triangles.left, 
 .side-triangles.right {
   position: fixed;
   top: 0;
   bottom: 0;
   pointer-events: none;
-  z-index: 1; /* ниже рамок (z-index:2) – треугольники плывут за рамками */
+  z-index: 1; 
 }
 .side-triangles.left {
   left: 0;
-  width: calc(50% - 400px - 2cm); /* расстояние до рамки минус 2 см */
+  width: calc(50% - 400px - 2cm); 
 }
 .side-triangles.right {
   right: 0;
   width: calc(50% - 400px - 2cm);
 }
 
-/* Стили для треугольников */
 .triangle {
   position: absolute;
-  top: -10%; /* начальное положение чуть выше экрана */
+  top: -10%; 
   animation-name: fall;
   animation-timing-function: linear;
   animation-iteration-count: 1;
@@ -148,7 +138,6 @@ a:hover {
   }
 }
 
-/* Адаптивные стили для маленьких экранов */
 @media (max-width: 600px) {
   .side-triangles.left,
   .side-triangles.right {
