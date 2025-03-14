@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000;
-  color: #CADABA;
+  color: #cadaba;
 }
 
 #menu-toggle {
@@ -43,7 +43,7 @@ body {
   top: 0;
   left: 0;
   width: 250px;
-  height: 100%;
+  height: 100vh;
   background-color: #111;
   z-index: 1000;
   padding: 1rem;
@@ -175,6 +175,6 @@ a:hover {
   }
   #menu ul {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.5rem;
   }
 }
