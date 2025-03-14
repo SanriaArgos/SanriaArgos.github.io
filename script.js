@@ -1,3 +1,4 @@
+// Плавная прокрутка для якорных ссылок
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -6,6 +7,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   });
+});
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  document.getElementById('menu').classList.toggle('active');
 });
 
 document.addEventListener("DOMContentLoaded", function() {
